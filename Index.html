@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Digital Dinámico - Edifer Vásquez</title>
+    <!-- Tailwind CSS para diseño responsivo de alta fidelidad -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos de optimización para impresión a PDF si se abre en PC */
+        @media print {
+            body { background: white; color: black; }
+            .no-print { display: none !important; }
+            .print-area { width: 100% !important; max-width: 100% !important; box-shadow: none !important; padding: 0 !important; margin: 0 !important; }
+            @page { size: A4; margin: 1cm; }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- ========================================== -->
+    <!-- SECCIÓN A: LA HOJA DEL CURRÍCULUM (HOME)  -->
+    <!-- ========================================== -->
+    <div id="homePage" class="w-full max-w-4xl mx-auto p-4 sm:p-6 md:p-8 block">
+        
+        <!-- Botón Superior de Acceso al Portafolio (No imprimible) -->
+        <div class="no-print mb-6 text-center">
+            <button onclick="openPortfolio(0)" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-lg transition-all transform active:scale-95 flex items-center justify-center gap-2 mx-auto">
+                <span>📁</span> Ver Portafolio Digital de Soportes
+            </button>
+        </div>
+
+        <!-- Contenedor de Hoja A4 Estilizada -->
+        <main class="print-area bg-white shadow-xl rounded-xl p-6 sm:p-10 md:p-12 text-[12px] sm:text-[13px] border border-slate-200 space-y-6">
+            
+            <!-- Encabezado con Foto Integrada -->
+            <header class="flex flex-col-reverse sm:flex-row justify-between items-center sm:items-start border-b-2 border-blue-900 pb-5 gap-4">
+                <div class="space-y-2 text-center sm:text-left w-full sm:max-w-[80%]">
+                    <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">EDIFER GREGORIO VÁSQUEZ HERNÁNDEZ</h1>
+                    <p class="text-sm font-bold uppercase tracking-wide text-blue-800">Ingeniero de Sistemas</p>
+                    <div class="text-slate-600 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 mt-2 text-[11px] sm:text-xs">
+                        <p class="flex items-center justify-center sm:justify-start gap-1">📞 <span>0414 207 8502</span></p>
+                        <p class="flex items-center justify-center sm:justify-start gap-1">📍 <span>San Cristóbal, Táchira, Venezuela</span></p>
+                        <p class="md:col-span-2 flex items-center justify-center sm:justify-start gap-1">🪪 <span>C.I. V-18.222.911 (VE) | C.C. 1.090.381.935 (CO)</span></p>
+                    </div>
+                </div>
+                <!-- Contenedor Foto de Perfil de GitHub -->
+                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-slate-50 border-2 border-slate-200 overflow-hidden shadow-md flex items-center justify-center shrink-0">
+                    <img src="https://github.com/Ferchoft/curriculum/blob/main/WhatsApp%20Image%202025-09-24%20at%203.27.20%20PM.jpeg?raw=true" alt="Edifer Vásquez" class="w-full h-full object-cover">
+                </div>
+            </header>
+
+            <!-- Perfil Profesional -->
+            <section class="space-y-1.5">
+                <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-900 border-b pb-0.5 border-slate-200">Perfil Profesional</h3>
+                <p class="text-slate-700 leading-relaxed text-justify">
+                    Ingeniero de Sistemas egresado de la UFPS con más de 14 años de trayectoria en el diseño, implementación y auditoría de infraestructura tecnológica, redes estructuradas, administración de centros de datos y seguridad electrónica corporativa. Especial enfoque en el desarrollo de arquitecturas lógicas robustas y automatizaciones para misiones diplomáticas, garantizando una gestión técnica bajo estrictos criterios de confidencialidad, ética y excelencia operativa.
+                </p>
+            </section>
+
+            <!-- Experiencia Laboral -->
+            <section class="space-y-4">
+                <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-900 border-b pb-0.5 border-slate-200">Experiencia Laboral Destacada</h3>
+                
+                <div class="space-y-1">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center font-bold text-slate-900 gap-0.5">
+                        <h4 class="text-[13px] sm:text-[14px]">Consulado General de la República de Colombia</h4>
+                        <span class="text-[10px] sm:text-xs font-medium text-slate-500">Acreditación: Sept. 2025</span>
+                    </div>
+                    <p class="text-[11px] sm:text-xs italic text-blue-700 font-semibold">Ingeniero de Sistemas y Desarrollador de Software</p>
+                    <ul class="list-disc pl-5 text-slate-700 space-y-1 mt-1 text-justify">
+                        <li>Diseño estructural y despliegue lógico de la infraestructura de red de datos completa para la sede consular.</li>
+                        <li>Instalación de la central de servidores corporativos, configuraciones de almacenamiento y bases de datos locales.</li>
+                        <li>Integración física del ecosistema de video-vigilancia CCTV y controles de acceso biométricos de alta seguridad.</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-1">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center font-bold text-slate-900 gap-0.5">
+                        <h4 class="text-[13px] sm:text-[14px]">Koda Kom Sistemas <span class="font-normal text-slate-500">| Seguridad e Integración</span></h4>
+                        <span class="text-[10px] sm:text-xs font-medium text-slate-500">2023 - Presente</span>
+                    </div>
+                    <p class="text-[11px] sm:text-xs italic text-blue-700 font-semibold">Consultor de Infraestructura y Especialista en Software de Seguridad</p>
+                    <ul class="list-disc pl-5 text-slate-700 space-y-1 mt-1">
+                        <li>Configuración de plataformas de seguridad unificadas basadas en la certificación internacional Hikvision Certified Security Associate (HCSA).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Educación -->
+            <section class="space-y-2">
+                <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-900 border-b pb-0.5 border-slate-200">Educación Formal</h3>
+                <div class="flex justify-between items-start gap-4">
+                    <div class="space-y-0.5">
+                        <h4 class="font-bold text-slate-900 text-[13px] sm:text-[14px]">Ingeniero de Sistemas</h4>
+                        <p class="text-slate-700 font-medium">Universidad Francisco de Paula Santander (UFPS) – Colombia</p>
+                        <p class="text-[10px] sm:text-xs text-slate-400 italic">Folio Universitario Autenticado: Libro 33, Acta 35306, Folio 1861</p>
+                    </div>
+                    <span class="font-bold text-slate-500 whitespace-nowrap">Año 2011</span>
+                </div>
+            </section>
+
+            <!-- Certificaciones -->
+            <section class="space-y-2">
+                <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-900 border-b pb-0.5 border-slate-200">Certificaciones Académicas</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 text-slate-700">
+                    <button onclick="openPortfolio(0)" class="text-left hover:text-blue-700 transition-colors group"><div>• <strong>Productividad Personal</strong> – Google (ID: 371197566) <span class="no-print text-blue-500 opacity-0 group-hover:opacity-100 text-[10px]">🔎</span></div></button>
+                    <button onclick="openPortfolio(3)" class="text-left hover:text-blue-700 transition-colors group"><div>• <strong>Título Oficial Ingeniero</strong> – Registrado UFPS <span class="no-print text-blue-500 opacity-0 group-hover:opacity-100 text-[10px]">🔎</span></div></button>
+                    <button onclick="openPortfolio(1)" class="text-left hover:text-blue-700 transition-colors group"><div>• <strong>Artificial Intelligence Fundamentals</strong> – IBM <span class="no-print text-blue-500 opacity-0 group-hover:opacity-100 text-[10px]">🔎</span></div></button>
+                    <button onclick="openPortfolio(2)" class="text-left hover:text-blue-700 transition-colors group"><div>• <strong>Project Management Fundamentals</strong> – IBM <span class="no-print text-blue-500 opacity-0 group-hover:opacity-100 text-[10px]">🔎</span></div></button>
+                    <button onclick="openPortfolio(5)" class="text-left hover:text-blue-700 transition-colors group"><div>• <strong>Referencia Consular</strong> – Misión San Cristóbal <span class="no-print text-blue-500 opacity-0 group-hover:opacity-100 text-[10px]">🔎</span></div></button>
+                </div>
+            </section>
+
+            <!-- Pie de página -->
+            <footer class="mt-8 border-t border-slate-200 pt-4 text-[10px] sm:text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+                <p>Aval institucional: Cónsul David Haddad Clavijo – Misión San Cristóbal</p>
+                <p class="font-semibold text-slate-400 italic">Soportes digitales auditables en el sistema</p>
+            </footer>
+        </main>
+
+        <!-- Botón Inferior para facilitar la navegación móvil -->
+        <div class="no-print mt-6 text-center">
+            <button onclick="openPortfolio(0)" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-lg transition-all transform active:scale-95 flex items-center justify-center gap-2 mx-auto">
+                <span>📁</span> Ver Portafolio Digital de Soportes
+            </button>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- SECCIÓN B: INTERFAZ DEL VISOR (PORTAFOLIO) -->
+    <!-- ========================================== -->
+    <div id="portfolioPage" class="w-full min-h-screen bg-slate-900 text-white p-4 hidden flex-col justify-between z-50 fixed top-0 left-0 overflow-y-auto">
+        
+        <!-- Barra Superior de Control Móvil -->
+        <header class="flex justify-between items-center border-b border-slate-800 pb-3">
+            <div class="space-y-0.5">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-blue-400">📁 Portafolio Digital</h3>
+                <p id="docCounter" class="text-[10px] text-slate-400">Documento 1 de 9</p>
+            </div>
+            
+            <!-- Botón Maestro: Volver al menú inicial (Currículum) -->
+            <button onclick="closePortfolio()" class="bg-red-600 hover:bg-red-700 text-white font-bold text-xs px-4 py-2 rounded-lg shadow-md transition-colors flex items-center gap-1.5">
+                <span>🏠</span> Volver al CV
+            </button>
+        </header>
+
+        <!-- Título descriptivo de la Credencial Activa -->
+        <div class="my-3 bg-slate-800 p-2 rounded-lg text-center border border-slate-700 shadow-inner">
+            <span id="docTitle" class="text-xs sm:text-sm font-bold text-slate-200">Cargando...</span>
+        </div>
+
+        <!-- Contenedor Responsivo del Visor del Documento -->
+        <main class="w-full h-[62vh] sm:h-[68vh] bg-slate-950 rounded-xl border border-slate-800 overflow-hidden relative flex items-center justify-center shadow-2xl">
+            <div id="mediaContainer" class="w-full h-full flex items-center justify-center">
+                <!-- El motor inyectará la imagen estructurada con lazy loading aquí -->
+            </div>
+        </main>
+
+        <!-- Barra Inferior de Navegación Táctil Móvil -->
+        <footer class="space-y-3 pt-3">
+            <div class="grid grid-cols-2 gap-3 max-w-md mx-auto">
+                <button onclick="prevDoc()" class="bg-slate-800 hover:bg-slate-700 text-white py-2.5 rounded-xl text-xs font-bold border border-slate-600 transition-colors active:bg-slate-600">
+                    ⬅️ Anterior
+                </button>
+                <button onclick="nextDoc()" class="bg-blue-600 hover:bg-blue-500 text-white py-2.5 rounded-xl text-xs font-bold transition-colors active:bg-blue-400">
+                    Siguiente ➡️
+                </button>
+            </div>
+            
+            <div class="text-center">
+                <a id="downloadBtn" href="#" target="_blank" class="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto max-w-md bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2.5 rounded-xl text-xs font-bold transition-colors shadow-md active:bg-emerald-400">
+                    <span>📥</span> Descargar Archivo Origen
+                </a>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- MOTOR DE LOGICA Y ENRUTAMIENTO (JS)       -->
+    <!-- ========================================== -->
+    <script>
+        // Mapeo estructurado con tus URLs reales de GitHub
+        const portfolio = [
+            { name: "1. Certificación IBM - Artificial Intelligence Fundamentals", url: "https://github.com/Ferchoft/curriculum/blob/main/Certificado%20IBM%201.JPG?raw=true" },
+            { name: "2. Certificación IBM - Project Management Fundamentals", url: "https://github.com/Ferchoft/curriculum/blob/main/Certificado%20IBM%202.JPG?raw=true" },
+            { name: "3. Registro Único de Información Fiscal (RIF)", url: "https://github.com/Ferchoft/curriculum/blob/main/Copia%20de%20RIF.JPG?raw=true" },
+            { name: "4. Título Oficial de Ingeniero de Sistemas - UFPS", url: "https://github.com/Ferchoft/curriculum/blob/main/copia%20de%20titulo.JPG?raw=true" },
+            { name: "5. Copia de Documentos de Identidad Consolidados", url: "https://github.com/Ferchoft/curriculum/blob/main/Documentos%20de%20identidad.JPG?raw=true" },
+            { name: "6. Certificación de Referencia Consular de la República", url: "https://github.com/Ferchoft/curriculum/blob/main/Referencia%20Consular.jpeg?raw=true" },
+            { name: "7. Soporte Técnico e Infraestructura Consular - Registro A", url: "https://github.com/Ferchoft/curriculum/blob/main/WhatsApp%20Image%202026-02-22%20at%209.36.02%20PM%20(6).jpeg?raw=true" },
+            { name: "8. Soporte Técnico e Infraestructura Consular - Registro B", url: "https://github.com/Ferchoft/curriculum/blob/main/WhatsApp%20Image%202026-02-22%20at%209.36.02%20PM%20(7).jpeg?raw=true" },
+            { name: "9. Certificación Oficial de Antecedentes Penales", url: "https://github.com/Ferchoft/curriculum/blob/main/Antecedentes%20penales.JPG?raw=true" }
+        ];
+
+        let currentIndex = 0;
+
+        // Controladores de Enrutamiento
+        function openPortfolio(indexToOpen = 0) {
+            currentIndex = indexToOpen;
+            document.getElementById('homePage').classList.remove('block');
+            document.getElementById('homePage').classList.add('hidden');
+            
+            document.getElementById('portfolioPage').classList.remove('hidden');
+            document.getElementById('portfolioPage').classList.add('flex');
+            
+            updateViewer();
+            window.scrollTo(0, 0);
+        }
+
+        function closePortfolio() {
+            document.getElementById('portfolioPage').classList.remove('flex');
+            document.getElementById('portfolioPage').classList.add('hidden');
+            
+            document.getElementById('homePage').classList.remove('hidden');
+            document.getElementById('homePage').classList.add('block');
+            window.scrollTo(0, 0);
+        }
+
+        // Renderizador del Visor Multimedia
+        function updateViewer() {
+            const currentDoc = portfolio[currentIndex];
+            
+            document.getElementById('docTitle').innerText = currentDoc.name;
+            document.getElementById('docCounter').innerText = `Documento ${currentIndex + 1} de ${portfolio.length}`;
+            
+            const container = document.getElementById('mediaContainer');
+            
+            container.innerHTML = `
+                <img src="${currentDoc.url}" 
+                     alt="${currentDoc.name}" 
+                     class="max-w-full max-h-full object-contain select-none shadow-lg rounded"
+                     loading="lazy">
+            `;
+            
+            document.getElementById('downloadBtn').href = currentDoc.url;
+        }
+
+        function nextDoc() {
+            currentIndex = (currentIndex + 1) % portfolio.length;
+            updateViewer();
+        }
+
+        function prevDoc() {
+            currentIndex = (currentIndex - 1 + portfolio.length) % portfolio.length;
+            updateViewer();
+        }
+    </script>
+</body>
+</html>
